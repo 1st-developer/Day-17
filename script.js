@@ -1,6 +1,8 @@
         const input = document.querySelector('#input');
         const button = document.querySelector('#search');
         const result = document.querySelector('#result');
+        const item = document.querySelector('.item');
+        const optionEl = document.querySelector('.option');
 
         const GetAnswer = async () => {
             const question = input.value;
@@ -32,3 +34,12 @@
         };
 
         button.addEventListener('click', GetAnswer);
+
+
+        optionEl.addEventListener('click', function () {
+          if(item.classList.contains('opt')) 
+            item.classList.remove('opt') 
+          else {
+            item.classList.add('opt');
+          }
+        });
