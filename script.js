@@ -3,6 +3,7 @@
         const result = document.querySelector('#result');
         const item = document.querySelector('.item');
         const optionEl = document.querySelector('.option');
+        const originalText = button.textContent;
 
         const GetAnswer = async () => {
             const question = input.value;
@@ -30,6 +31,9 @@
             const data = await response.json()
 
             result.textContent = data.response;
+            button.disabled = true;
+            button.textContent = originalText;
+            button.classList.remove('show');
 
         };
 
