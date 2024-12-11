@@ -39,11 +39,7 @@
 
 
         optionEl.addEventListener('click', function () {
-          if(item.classList.contains('opt')) 
-            item.classList.remove('opt') 
-          else {
-            item.classList.add('opt');
-          }
+          item.classList.toggle('opt');
         });
         
         logo.addEventListener('click', function () {
