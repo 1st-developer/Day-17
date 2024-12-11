@@ -3,6 +3,8 @@
         const result = document.querySelector('#result');
         const item = document.querySelector('.item');
         const optionEl = document.querySelector('.option');
+        const logo = document.querySelector('.logo');
+        const self = document.querySelector('.self');
 
         const GetAnswer = async () => {
             const question = input.value;
@@ -42,4 +44,8 @@
           else {
             item.classList.add('opt');
           }
+        });
+        
+        logo.addEventListener('click', function () {
+          self.classList.toggle('item-left');
         });
