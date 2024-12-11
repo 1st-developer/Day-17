@@ -32,6 +32,9 @@
             const data = await response.json()
 
             result.textContent = data.response;
+            button.disabled = true;
+            button.textContent = originalText;
+            button.classList.remove('show');
 
         };
 
