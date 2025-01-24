@@ -47,4 +47,4 @@
         
         logo.addEventListener('click', function () {
           self.classList.toggle('item-left');
-        });
+        })
